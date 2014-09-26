@@ -1,7 +1,7 @@
-var defenceSystem = function() {
+var defenceSystem = function(server_url) {
   var self = this;
   self.setControls();
-  self.connect();
+  self.connect(server_url);
 }
 
 defenceSystem.prototype.setControls = function() {
@@ -20,14 +20,14 @@ defenceSystem.prototype.setControls = function() {
 
 }
 
-defenceSystem.prototype.connect = function() {
+defenceSystem.prototype.connect = function(server_url) {
   var self = this;
   self.log({
     status: 'PENDING',
     message: 'Establishing uplink to Defence System'
   });
 
-  self.socket = io.connect('http://localhost');
+  self.socket = io.connect('http://' + server_url);
 
   self.socket.on('connected', function (data) {
     self.log(data);
