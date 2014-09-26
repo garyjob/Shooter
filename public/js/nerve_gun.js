@@ -72,5 +72,3 @@ defenceSystem.prototype.log = function(msg_obj) {
   $log_wrapper.prepend($log_entry);
 
 }
-
-var ds = new defenceSystem();
