@@ -2,7 +2,7 @@ bodyParser = require('body-parser')
 express    = require 'express'
 path       = require 'path'
 fs         = require 'fs'
-nerve_gun  = require 'nerve_gun'
+nerve_gun  = require './nerve_gun'
 
 global.CONFIG = null
 CONFIG = JSON.parse(fs.readFileSync(__dirname + '/config/config.js').toString());
