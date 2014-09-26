@@ -47,7 +47,10 @@ defenceSystem.prototype.enableTrigger = function() {
 defenceSystem.prototype.disableTrigger = function() {
   var self = this;
   $(self.trigger_button).attr('disabled', true);
+  console.log("diabled trigger");
+  
   setTimeout(function() {
+    console.log("enabling trigger");
     self.enableTrigger();
   }, 4300);
 }
