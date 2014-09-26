@@ -22,6 +22,15 @@ app.use express.static(__dirname + '/public')
 app.get '/', (req, res)->
   res.render 'index'
 
+app.get '/fire', (req, res)->
+  
+  console.log 'Boomz!!! Missiles fired...'
+  ng = new nerveGun CONFIG.pin_num
+  ng.fire()
+
+  res.send 
+    status: "SUCCES"
+    message: "Missle was fired"
 
 
 # Socket IO server
