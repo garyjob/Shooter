@@ -22,7 +22,7 @@ nerveGun.prototype.keep_firing = function() {
 
   setTimeout(function() {
     self.seize_fire();
-  }, 10000);
+  }, 1000);
 
 }
 
