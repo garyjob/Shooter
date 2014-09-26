@@ -36,18 +36,20 @@ defenceSystem.prototype.connect = function(server_url) {
 
   self.socket.on('fired', function (data) {
     self.log(data);
-    self.enableTrigger();
   });  
 }
 
 defenceSystem.prototype.enableTrigger = function() {
   var self = this;
-  $(self.trigger_button).removeAttr('disabled')
+  $(self.trigger_button).removeAttr('disabled');
 }
 
 defenceSystem.prototype.disableTrigger = function() {
   var self = this;
   $(self.trigger_button).addAttr('disabled');
+  setTimeout(function() {
+    self.enableTrigger();
+  }, 4300);
 }
 
 defenceSystem.prototype.fire = function() {
