@@ -2,7 +2,7 @@ bodyParser = require('body-parser')
 express    = require 'express'
 path       = require 'path'
 fs         = require 'fs'
-# nerveGun   = require './nerve_gun'
+nerveGun   = require './nerve_gun'
 
 global.CONFIG = null
 ENV     = (process.env['NODE_ENV'] || 'development').toLowerCase()
