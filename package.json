@@ -1,7 +1,7 @@
 {
     "author": "Gary Teh <garyjob@gmail.com>",
     "name": "Shooter"
-  , "main": "./server.js"
+  , "main": "./defence_server.coffee"
   , "version": "0.0.2"
   , "private": true
   , "engines": {
