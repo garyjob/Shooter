@@ -1,0 +1,36 @@
+.not-round {
+  border-radius: 0px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-top: 30px;
+  margin-bottom: 8px; 
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+#log {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#log div {
+  padding: 10px;
+}
+
+#obama {
+  margin-bottom: 30px;
+  width: 600px
+}
