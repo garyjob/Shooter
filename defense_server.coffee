@@ -31,12 +31,14 @@ io      = require('socket.io')(server)
 # Start socket server
 io.on 'connection', (socket)->
 
+  console.log 'Boomz!!! Captain America came to the rescue...'
   socket.emit 'connected', { 
     status: 'SUCCESS',
     message: 'Defense System Armed'
   }
 
   socket.on 'fire', (pin_num)=>
+
     console.log 'Boomz!!! Missiles fired...'
     ng = new nerveGun CONFIG.pin_num
     ng.fire()
