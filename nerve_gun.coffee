@@ -6,7 +6,7 @@ class nerveGun
 
 
   fire: ()->
-    console.log "firing"
+    console.log "firing PIN : #{@pin_num}"
     gpio.open @pin_num, "output", (err)=>
       gpio.write @pin_num, 1, ()=>
         @keep_firing()
