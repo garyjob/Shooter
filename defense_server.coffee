@@ -71,4 +71,4 @@ if !module.parent
   # Start tutorial server
   port = process.argv[2] || CONFIG.port
   server.listen port
-  console.log "Attack Server listening at port : %s", port
+  console.log "Attack Server started: \n\tport: %s \n\tenvironment: %s", port, ENV
