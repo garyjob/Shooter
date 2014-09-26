@@ -2,7 +2,7 @@ bodyParser = require('body-parser')
 express    = require 'express'
 path       = require 'path'
 fs         = require 'fs'
-nerve_gun  = require './nerve_gun'
+nerveGun   = require './nerve_gun'
 
 global.CONFIG = null
 CONFIG = JSON.parse(fs.readFileSync(__dirname + '/config/config.js').toString());
@@ -23,7 +23,7 @@ app.get '/', (req, res)->
   res.render 'index'
 
 app.get '/fire', (req, res)->
-  
+
   console.log 'Boomz!!! Missiles fired...'
   ng = new nerveGun CONFIG.pin_num
   ng.fire()
